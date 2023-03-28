@@ -1,5 +1,17 @@
+@font-face {
+    font-family: "mmmsRegular";
+    src: url("../fonts/mms-bangla-regular.ttf");
+}
+
+@font-face {
+    font-family: "mmmsBold";
+    src: url("../fonts/mms-bangla-bold.ttf");
+}
+
 body{
-	background: lighten($lpCol,0%);
+	background: lighten($lpCol,10%);
+	overflow-x: hidden;
+	font-family: "mmmsBold";
 }
 
 .btn-primary {
@@ -101,6 +113,218 @@ body{
     box-shadow: 0 0 0 0.2rem rgba($primCol, 0.25);
 }
 
+.cust-card{
+	&:not(:last-child){
+		margin-bottom: 30px;
+	}
 
+	.title{
+		background: $primCol;
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		color: #ffffff;
+		padding: 5px 0 2.5px 0;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+	}
+
+	.body{
+		padding: 15px;
+		border: 1px solid $primCol;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+}
+
+.custom-file-label {
+    color: $primCol;
+    border: 1px solid $primCol;
+    border-radius: .25rem;
+}
+
+.custom-file-input:focus~.custom-file-label {
+    border-color: lighten($primCol, 50%);
+    box-shadow: 0 0 0 0.2rem rgba($primCol, 0.25);
+}
+
+.modal-dialog {
+    max-width: 1000px;
+}
+
+.title-secondary{
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $primCol;
+}
+
+.title-divider{
+	border-color: $primCol;
+	margin-bottom: 15px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.option-wrapper-inside{
+	display: flex;
+}
+
+#option-1:checked:checked ~ .option-1, #option-2:checked:checked ~ .option-2 {
+    border-color: $primCol;
+}
+
+.option-wrapper .option {
+    background: #fff;
+    height: calc(1.5em + 0.75rem + 2px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    border-radius: .25rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 0;
+    color: unset;
+    font-weight: unset;
+}
+
+#option-1:checked:checked ~ .option-1, #option-2:checked:checked ~ .option-2 {
+    color: $primCol;
+}
+
+#option-1:checked:checked ~ .option-1 .dot-wrapper, #option-2:checked:checked ~ .option-2 .dot-wrapper {
+    background: $primCol;
+}
+
+#option-1:checked:checked ~ .option-1 .dot, #option-2:checked:checked ~ .option-2 .dot {
+    background: #fff;
+}
+
+.option-wrapper .option .dot {
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+}
+
+#option-1:checked:checked ~ .option-1 .dot::before, #option-2:checked:checked ~ .option-2 .dot::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.option-wrapper .option .dot::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: $primCol;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+
+.dot-wrapper{
+	height: calc(1.5em + 0.75rem + 2px);
+	display: flex;
+	align-items: center;
+	padding-left: 7px;
+	padding-right: 7px;
+	margin-right: 10px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: $primCol;
+    border: 1px solid $primCol;
+}
+
+.nav-pills{
+	justify-content: center;
+	.nav-link {
+	    border-radius: 0.25rem;
+	    border: 1px solid #dddddd;
+	}
+	.nav-item{
+		&:not(:last-child){
+			margin-right: 15px;
+		}
+	}
+}
+
+.table{
+	border: 1px solid $primCol;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: unset;
+
+	.th{
+		@include flex(row,space-between,stretch);
+		background: $primCol;
+		color: #ffffff;
+		font-weight: bold;
+		text-transform: uppercase;
+		flex-basis: 100%;
+		padding: 0 7.5px;
+
+		.td{
+			@include flex(row,null,center);
+			padding: 5px 7.5px;
+		}
+	}
+
+	.tbody{
+		padding: 7.5px;
+
+		.btn-primary{
+			background-color: $primCol;
+		}
+	}
+
+	.tr{
+		@extend .th;
+		background: transparent;
+		color: $primCol;
+		font-weight: 400;
+		text-transform: capitalize;
+		padding: 0;
+
+		.td{
+			padding: 7.5px;
+		}
+
+		.thSm, .thsm+hr{
+			display: none;
+		}
+	}
+}
+
+.ck.ck-editor__main>.ck-editor__editable{
+	padding: 0 30px;
+}
+
+.custom-file{
+	overflow: hidden;
+}
+
+[data-include="footer"]{
+    display: flex;
+    margin-left: -35px;
+    margin-right: 0px;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 260px);
+
+    .foo-wrapper{
+    	padding: 5px 12px 5px 27px;
+    }
+}
 
 @import "contentResponsive";

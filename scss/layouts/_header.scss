@@ -1,3 +1,64 @@
+.headerPrivate{
+	top:0;
+	.navbar{
+		background: $lpCol;
+		justify-content: space-between;
+		padding-left: 12px;
+		padding-right:12px;
+		.logo{
+			height: 50px;
+		}
 
+		.btn-ms{
+			border: 2px solid $primCol;
+			border-radius: 5px;
+			padding: 5px 10px;
+		}
+	}
+
+	.navbar-expand-lg .navbar-nav .nav-link {
+	    padding-right: 15px;
+	    padding-left: 15px;
+	}
+
+	.user-btn{
+		display: flex;
+		align-items: center;
+	}
+
+	.avatar-wrapper{
+		display: flex;
+		justify-content:center;
+		align-items: flex-start;
+		overflow: hidden;
+		width: 32px;
+		height: 32px;
+		border: 1px solid $primCol;
+		border-radius: 32px;
+		margin-right: 15px;
+
+		img{
+			width: 100%;
+		}
+	}
+	
+	.mobile-sidebar{
+		position: absolute;
+		top: 66px;
+		right: -100%;
+		background: #ffffff;
+		padding: 15px;
+		height: calc(100vh - 66px);
+		overflow-y: auto;
+		transition: right 0.3s ease;
+		box-shadow: 0 0px 10px lighten($primCol, 25%);
+		z-index: -1;
+		display: none;
+	}
+
+	.mobile-sidebar.active{
+		right: 0;
+	}
+}
 
 @import "headerResponsive";

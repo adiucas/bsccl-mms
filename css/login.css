@@ -2,27 +2,39 @@
   display: flex;
   flex-direction: row;
   padding: 0; }
-  .mms-login .left {
-    background: linear-gradient(135deg, #0066B3 0%, #07B9B2 100%);
+  .mms-login .banner .left {
     border-right: 1px solid #47f8f1;
     overflow: hidden;
     height: calc(100vh - 41px); }
-    .mms-login .left img {
+    .mms-login .banner .left img {
       height: 100%; }
   .mms-login .form {
-    width: 100%; }
-    .mms-login .form .right {
-      padding: 30px 50px;
+    position: relative;
+    height: calc(100vh - 40px); }
+    .mms-login .form .loginBanner {
+      height: 100%; }
+    .mms-login .form .formWrapper {
       display: flex;
       flex-direction: column;
-      height: calc(100vh - 1.5rem);
-      justify-content: space-between; }
-      .mms-login .form .right .page-title h1 {
+      position: absolute;
+      bottom: 160px;
+      right: 40px; }
+      .mms-login .form .formWrapper .page-title h1 {
         color: #0066B3; }
-      .mms-login .form .right .page-title p a {
+      .mms-login .form .formWrapper .page-title p a {
         color: #0066B3; }
-      .mms-login .form .right form {
+      .mms-login .form .formWrapper form {
         margin-top: auto;
         margin-bottom: auto; }
+
+[data-include="footer"] {
+  display: flex;
+  margin-left: 0;
+  margin-right: 0px;
+  position: unset;
+  bottom: 0;
+  width: 100%; }
+  [data-include="footer"] .foo-wrapper {
+    padding: 5px 12px 5px 12px; }
 
 /*# sourceMappingURL=login.css.map */

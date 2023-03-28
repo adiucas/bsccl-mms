@@ -25,37 +25,29 @@
 	<!-- css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/login.css">
-	<link rel="stylesheet" href="css/loginRes.css">
 </head>
 <body>
-	<div class="mms-login">
-		<div class="form container">
-			<div class="d-flex justify-content-center h-100">
-				<img src="images/mms-banner.jpg" class="loginBanner">
-			</div>
-			<div class="formWrapper">
-				<div class="page-title">
-					<h1>সাইন ইন</h1>
-				</div>
-				<form class="formInputs">
-				  <div class="mb-4">
-				    <label for="exampleInputEmail1" class="form-label">ইউজার নেম</label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-				  </div>
-				  <div class="mb-4">
-				    <label for="exampleInputPassword1" class="form-label">পাসওয়ার্ড</label>
-				    <input type="password" class="form-control" id="exampleInputPassword1">
-				  </div>
-				  <button type="submit" class="btn btn-primary">লগইন</button>
-				</form>
-			</div>
+	<!--============================
+	=            header            =
+	=============================-->
+	<section class="headerPrivate sticky-top" data-include="header">
+	</section>
+
+	<!--=============================
+	=            body            =
+	==============================-->
+	<div class="wrapper">
+		<div id="sidebar" class="sidebar" data-include="sidebar">
+		</div>
+		<div class="content">
+			<!--============================
+			=            footer            =
+			=============================-->
+			<footer data-include="footer"></footer>
 		</div>
 	</div>
-	<!--============================
-	=            footer            =
-	=============================-->
-	<div data-include="footer"></div>
+
+	
 </body>
 <!-- scripts -->
 <script src="js/jquery-3.6.1.min.js"></script>

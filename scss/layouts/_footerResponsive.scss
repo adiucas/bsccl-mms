@@ -1,0 +1,15 @@
+@media (max-width:992px){
+	.footer{
+		width: 100%;
+	}
+	.foo-wrapper{
+		@include flex(col,space-between,center);
+
+		.left{
+			text-align: center;
+		}
+		.right{
+			margin-top: 5px;
+		}
+	}
+}
